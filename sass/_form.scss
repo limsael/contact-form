@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #0d6efd;
+}
+
+.wrapper {
+  width: 720px;
+  background-color: #fff;
+  border-radius: 10px;
+
+  header {
+    font-size: 22px;
+    font-weight: 600;
+    padding: 20px 30px;
+    border-bottom: 1px solid #bfbfbf;
+  }
+}
+
+form {
+  margin: 35px 30px;
+
+  i {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #bfbfbf;
+  }
+}
+
+.dbl-field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.field {
+  height: 50px;
+  width: calc(100% / 2 - 13px);
+  position: relative;
+
+  input::placeholder {
+    color: #bfbfbf;
+  }
+}
+
+input,
+textarea {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  padding: 0 18px 0 48px;
+  border-radius: 10px;
+  border: 1px solid #bfbfbf;
+}
+
+.message {
+  position: relative;
+
+  i {
+    top: 30px;
+    font-size: 20px;
+  }
+
+  textarea {
+    min-height: 120px;
+    resize: none;
+    padding: 15px 20px 0 48px;
+
+    &::placeholder {
+      color: #bfbfbf;
+    }
+  }
+}
+
+input:focus,
+textarea:focus {
+  border: 2px solid #0d6efd;
+}
+
+input:focus ~ i {
+  color: #0d6efd;
+}
+
+.button-area {
+  margin: 25px 0;
+  display: flex;
+  align-items: center;
+
+  button {
+    font-size: 18px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #0d6efd;
+    padding: 13px 25px;
+  }
+
+  span {
+    color: #0d6efd;
+    margin-left: 30px;
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    header {
+      text-align: center;
+    }
+  }
+
+  .dbl-field {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  .field {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .button-area {
+    flex-direction: column;
+
+    button {
+      width: 100%;
+    }
+
+    span {
+      text-align: center;
+      margin: 20px 0;
+    }
+  }
+}
